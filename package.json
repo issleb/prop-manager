@@ -1,0 +1,19 @@
+{
+  "name": "prop-manager",
+  "version": "1.0.0",
+  "description": "Manage all my props.",
+  "main": "background.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issleb/prop-manager.git"
+  },
+  "author": "Brian Issleb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/issleb/prop-manager/issues"
+  },
+  "homepage": "https://github.com/issleb/prop-manager#readme"
+}
