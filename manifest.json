@@ -1,0 +1,13 @@
+{
+    "name": "PropManager",
+    "version": "1.0.0",
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+      },
+      "content_scripts": [{
+          "js": [ "airbnb.js" ],
+          "matches": ["https://*.airbnb.com/*"]
+       }],      
+    "manifest_version": 3
+}
