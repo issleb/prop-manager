@@ -1,15 +1,15 @@
-const path = require('path');
+const path = require("path");
 const package = require("./package.json");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    background: './background.js',
-    airbnb: './airbnb.js',
+    background: "./background.js",
+    airbnb: "./airbnb.js",
   },
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, './dist')
+    filename: "[name].js",
+    path: path.resolve(__dirname, "./dist")
   },
   plugins: [
     new CopyWebpackPlugin({
