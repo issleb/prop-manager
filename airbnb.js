@@ -1,3 +1,5 @@
-const background = chrome.runtime.connect({ name: "AirBnb" });
+import { SITES } from "./constants.js";
 
-console.log('Extension running on Airbnb.');
+const background = chrome.runtime.connect({ name: SITES.AIRBNB });
+
+console.log(`Extension running on ${SITES.AIRBNB}.`);
