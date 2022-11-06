@@ -4,8 +4,8 @@
   "description": "Manage all my props.",
   "main": "background.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js --mode=production",
+    "start": "set \"INLINE_RUNTIME_CHUNK=false\" && webpack --config webpack.config.js --watch --mode=development",
     "test": "jest"
   },
   "repository": {

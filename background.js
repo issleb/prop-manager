@@ -10,3 +10,6 @@ chrome.runtime.onConnect.addListener(async (port) => {
         console.log(room);
     }
 });
+
+if(process.env.NODE_ENV == "development") {
+}
