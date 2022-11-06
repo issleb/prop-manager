@@ -1,5 +1,7 @@
 import React from 'react';
 
+import "./SideTab.css";
+
 const onClick= () => {
     console.log('You clicked me!')
 };
@@ -7,7 +9,7 @@ const onClick= () => {
 function SideTab(props) {
     return (
         <div className="tab">
-            <div className="tab-content" onClick={onClick}></div>
+            <div className="tab-content" onClick={onClick}>P</div>
         </div>
     );
 }

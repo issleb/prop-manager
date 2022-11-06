@@ -1,0 +1,23 @@
+#prop-manager .tab {
+    height: 40px; 
+    width: 40px; 
+    position: fixed; 
+    top: 28%;
+    right: 0;
+    z-index: 1000;
+    cursor: pointer;
+
+    background: linear-gradient(160.38deg, #222eb7 1.08%, #213ca9 88.5%);
+    box-shadow: 0px 8px 16px rgba(83, 91, 100, 0.24);
+    border-radius: 8px 0px 0px 8px;
+}
+
+#prop-manager .tab .tab-content {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
