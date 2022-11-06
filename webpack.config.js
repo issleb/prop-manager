@@ -12,6 +12,21 @@ module.exports = {
     path: path.resolve(__dirname, "./dist")
   },
   devtool: 'cheap-module-source-map',
+  module: {
+    rules: [
+      {
+        // Process all .js files with babel.
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+      }
+    ]
+  },
+
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
