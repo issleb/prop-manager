@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { SITES } from "./constants.js";
-import SideTab from './App/SideTab';
+import Extension from './App/Extension';
 
 const divName = "prop-manager";
 
@@ -18,6 +18,6 @@ if (!homeDiv)  {
 const root = ReactDOM.createRoot(homeDiv);
 root.render(
   <React.StrictMode>
-    <SideTab />
+    <Extension />
   </React.StrictMode>
 );

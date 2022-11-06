@@ -1,0 +1,27 @@
+
+#prop-manager .pm-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    max-height: 98vh;
+    min-height: 300px;
+    margin: 8px;
+    z-index: 1000;
+    border: 1px solid silver;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    cursor: pointer;
+}
+
+#prop-manager .pm-bar-content  {
+    padding: 72px 24px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
