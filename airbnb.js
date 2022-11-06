@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { SITES } from "./constants.js";
 import SideTab from './App/SideTab';
 
@@ -15,5 +15,9 @@ if (!homeDiv)  {
     document.body.appendChild(homeDiv);              
 }
 
-ReactDOM.render(
-    <SideTab> </SideTab>, homeDiv);
+const root = ReactDOM.createRoot(homeDiv);
+root.render(
+  <React.StrictMode>
+    <SideTab />
+  </React.StrictMode>
+);
