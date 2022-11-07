@@ -6,7 +6,12 @@
       },
       "content_scripts": [{
           "js": [ "airbnb.js" ],
+          "match_origin_as_fallback": true,
           "matches": ["https://*.airbnb.com/*"]
        }],      
-    "manifest_version": 3
+    "manifest_version": 3,
+    "permissions": [ "tabs", "scripting"],
+    "host_permissions": [
+        "https://*.airbnb.com/"
+    ]    
 }
