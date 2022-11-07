@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { SITES } from "./constants.js";
+import { SITES, HTML } from "./constants.js";
 import Extension from "./App/Extension";
 import Toolkit from "./App/Toolkit/Toolkit";
-
-const divName = "prop-manager";
 
 const background = chrome.runtime.connect({ name: SITES.AIRBNB });
 const sendMessage = (name, params) => {
@@ -18,10 +16,10 @@ const sendMessage = (name, params) => {
 
 console.log(`Extension running on ${SITES.AIRBNB}.`);
 
-let homeDiv = document.getElementById(divName);
+let homeDiv = document.getElementById(HTML.ROOT_ID);
 if (!homeDiv) {
     homeDiv = document.createElement("div");
-    homeDiv.id = divName;
+    homeDiv.id = HTML.ROOT_ID;
     document.body.appendChild(homeDiv);              
 }
 

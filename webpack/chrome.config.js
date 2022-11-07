@@ -1,5 +1,6 @@
 const path = require("path");
-const package = require("./package.json");
+const package = require("../package.json");
+const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -9,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "./dist")
+    path: path.resolve(__dirname, "../dist")
   },
   devtool: 'cheap-module-source-map',
   module: {
@@ -32,6 +33,7 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         { 
