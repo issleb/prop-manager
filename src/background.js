@@ -1,4 +1,4 @@
-import Parser from "./parser.js";
+import Parser from "./services/parser.js";
 import { SITES, MESSAGES } from "./constants.js";
 
 chrome.runtime.onConnect.addListener(async (port) => {

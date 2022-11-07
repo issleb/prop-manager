@@ -1,0 +1,20 @@
+{
+    "properties": [
+        {
+            "id": "22465553",
+            "name": "Kenosha cabin",
+            "metrics": {
+                "occupancy": {
+                    "value": ".75",
+                    "market": ".85",
+                    "diff": "-.1"
+                },
+                "adr": {
+                    "value": "156",
+                    "market": "140",
+                    "diff": "16"
+                }  
+            }
+        }
+    ]
+}
