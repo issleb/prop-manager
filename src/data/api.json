@@ -1,8 +1,9 @@
 {
     "properties": [
         {
-            "id": "22465553",
-            "name": "Kenosha cabin",
+            "id": "35782",
+            "name": "Silver Lake hot tub",
+            "address": "12345 Swiss Dr., Silver Lake, WI",
             "metrics": {
                 "occupancy": {
                     "value": ".75",
@@ -14,7 +15,18 @@
                     "market": "140",
                     "diff": "16"
                 }  
-            }
+            },
+            "listings": {
+                "airbnb": {
+                    "id": "610721631326249541",
+                    "url": "https://www.airbnb.com/rooms/610721631326249541"
+                },
+                "vrbo": {
+                    "id": "9682530ha",
+                    "url": "https://www.vrbo.com/9682530ha"
+                }  
+            }            
+
         }
     ]
 }

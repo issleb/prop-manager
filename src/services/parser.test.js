@@ -16,3 +16,15 @@ describe("parseAirUrl", () => {
         expect(room).toBeUndefined();
     });    
 });
+
+describe("parseVrboUrl", () => { 
+    test("default url", () => {
+        const url = "https://www.vrbo.com/9682530ha?adultsCount=1&arrival=2023-09-01&departure=2023-09-08";
+
+        const room = Parser.parseVrboUrl(url);
+
+        expect(room.id).toEqual("9682530ha");
+    });
+
+    // TODO: Add negative test.
+});
