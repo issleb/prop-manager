@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Messenger from "../services/messenger";
-import { HTML } from "../constants";
+import { HTML, MESSAGES } from "../constants";
 import Extension from "../app/Extension";
 import Toolkit from "../app/Toolkit/Toolkit";
 
-const start = (name) => {
-    const port = chrome.runtime.connect({ name });
-    console.log(`PropertyManager Content script running.`);
 
+const loadRoom = (port, room) => {
     let homeDiv = document.getElementById(HTML.ROOT_ID);
     if (!homeDiv) {
         homeDiv = document.createElement("div");
@@ -18,15 +16,27 @@ const start = (name) => {
 
     const root = ReactDOM.createRoot(homeDiv);
     root.render(
-      <React.StrictMode>
-        <Extension />
-        if(process.env.NODE_ENV == "development") {
-            <Toolkit sendMessage={(name, message) => {
-                Messenger.send(port, name, message);
-            }} />
-        }
-      </React.StrictMode> 
+        <React.StrictMode>
+            <Extension room={room} />
+            if(process.env.NODE_ENV == "development") {
+                <Toolkit sendMessage={(name, message) => {
+                    Messenger.send(port, name, message);
+                }} />
+            }
+        </React.StrictMode> 
     );
+}
+
+const start = (name) => {
+    const port = chrome.runtime.connect({ name });
+    console.log("PropertyManager Content script running.");
+
+    Messenger.listen(port, MESSAGES.ROOM_LOAD, (message) => {
+        if (message.room) {
+            console.log(`PropertyManager Room, ${message.room}`);
+            loadRoom(port, message.room);
+        }     
+    })
 
     // Clean up if we get disconnected.
     port.onDisconnect.addListener(() => {
@@ -39,12 +49,3 @@ const ChannelContent = {
 };
 
 export default ChannelContent;
-
-
-
-
-
-
-
-
-

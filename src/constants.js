@@ -5,6 +5,7 @@ export let SITES = Object.freeze({
 
 export let MESSAGES = Object.freeze({
     TOOLKIT_REFRESH: "toolkit-frefresh",
+    ROOM_LOAD: "room-load",
 });
 
 export let HTML = Object.freeze({

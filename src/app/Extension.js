@@ -16,7 +16,7 @@ function Extension (props) {
         );
     } else {
         return (
-            <SideBar onClick={onClick} />
+            <SideBar onClick={onClick} room={props.room} />
         );
     }
 }
