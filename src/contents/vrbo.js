@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { SITES, HTML } from "./constants.js";
-import Extension from "./App/Extension";
-import Toolkit from "./App/Toolkit/Toolkit";
+import { SITES, HTML } from "../constants";
+import Extension from "../app/Extension";
+import Toolkit from "../app/Toolkit/Toolkit";
 
-const background = chrome.runtime.connect({ name: SITES.AIRBNB });
+const background = chrome.runtime.connect({ name: SITES.VRBO });
 const sendMessage = (name, params) => {
     const message = {
         type: name,
@@ -14,7 +14,7 @@ const sendMessage = (name, params) => {
     background.postMessage(message);
 };
 
-console.log(`Extension running on ${SITES.AIRBNB}.`);
+console.log(`Extension running on ${SITES.VRBO}.`);
 
 let homeDiv = document.getElementById(HTML.ROOT_ID);
 if (!homeDiv) {

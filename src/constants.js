@@ -1,5 +1,6 @@
 export let SITES = Object.freeze({
     AIRBNB: "AirBnb",
+    VRBO: "Vrbo",
 });
 
 export let MESSAGES = Object.freeze({

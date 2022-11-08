@@ -1,9 +1,12 @@
 import Install from "./install";
+import Dev from "./dev";
 
+import Messenger from "../services/messenger";
 import Parser from "../services/parser";
 import { SITES, MESSAGES } from "../constants";
 
 Install.start();
+Dev.start();
 
 chrome.runtime.onConnect.addListener(async (port) => {
     console.log(`PropManager ${port.name} started on ${port.sender.url}.`);
@@ -12,13 +15,9 @@ chrome.runtime.onConnect.addListener(async (port) => {
         const room = Parser.parseAirUrl(port.sender.url);
         console.log("PM Room", room);
     }
-
-    if(process.env.NODE_ENV == "development") {
-        port.onMessage.addListener(async (message) => {
-            if (message.type === MESSAGES.TOOLKIT_REFRESH) {
-                console.log("Reloading runtime.");
-                chrome.runtime.reload();            
-            };
-        });
+    if (port.name == SITES.VRBO) {
+        const room = Parser.parseVrboUrl(port.sender.url);
+        console.log("PM Room", room);
     }
+
 });
