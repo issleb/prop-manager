@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    background: "./src/background.js",
+    background: "./src/workers/background.js",
     airbnb: "./src/airbnb.js",
   },
   output: {

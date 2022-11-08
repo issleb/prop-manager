@@ -1,5 +1,9 @@
-import Parser from "./services/parser.js";
-import { SITES, MESSAGES } from "./constants.js";
+import Install from "./install";
+
+import Parser from "../services/parser";
+import { SITES, MESSAGES } from "../constants";
+
+Install.start();
 
 chrome.runtime.onConnect.addListener(async (port) => {
     console.log(`PropManager ${port.name} started on ${port.sender.url}.`);
@@ -16,17 +20,5 @@ chrome.runtime.onConnect.addListener(async (port) => {
                 chrome.runtime.reload();            
             };
         });
-    }
-});
-
-// Updates content scripts on all relevant tabs when installed.
-chrome.runtime.onInstalled.addListener(async () => {
-    for (const cs of chrome.runtime.getManifest().content_scripts) {
-        for (const tab of await chrome.tabs.query({url: cs.matches})) {
-            chrome.scripting.executeScript({
-                target: {tabId: tab.id},
-                files: cs.js,
-            });
-        }
     }
 });
