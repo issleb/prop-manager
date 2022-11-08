@@ -16,17 +16,14 @@
                     "diff": "16"
                 }  
             },
-            "listings": {
-                "airbnb": {
-                    "id": "610721631326249541",
-                    "url": "https://www.airbnb.com/rooms/610721631326249541"
-                },
-                "vrbo": {
-                    "id": "9682530ha",
-                    "url": "https://www.vrbo.com/9682530ha"
-                }  
-            }            
-
+            "airbnb": {
+                "id": "610721631326249541",
+                "url": "https://www.airbnb.com/rooms/610721631326249541"
+            },
+            "vrbo": {
+                "id": "9682530ha",
+                "url": "https://www.vrbo.com/9682530ha"
+            }   
         }
     ]
 }

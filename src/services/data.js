@@ -7,8 +7,24 @@ const getRoom = (roomId) => {
     return room;
 }
 
+const getRoomByAir = (roomId) => {
+    const properties = data.properties;
+
+    const room = properties.find(({ airbnb }) => airbnb?.id === roomId);
+    return room;
+}
+
+const getRoomByVrbo = (roomId) => {
+    const properties = data.properties;
+
+    const room = properties.find(({ vrbo }) => vrbo?.id === roomId);
+    return room;
+}
+
 const Data = {
-    getRoom
+    getRoom,
+    getRoomByAir,
+    getRoomByVrbo
 };
 
 export default Data;
