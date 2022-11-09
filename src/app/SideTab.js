@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./SideTab.css";
+import "./SideTab.scss";
 
 function SideTab(props) {
     return (

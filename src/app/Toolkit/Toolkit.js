@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MESSAGES } from "../../constants.js";
 
-import "./Toolkit.css";
+import "./Toolkit.scss";
 
 function Toolkit(props) {
     const [show, setShow] = useState(true);
