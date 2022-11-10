@@ -5,6 +5,7 @@ import "./Toolkit.scss";
 
 function Toolkit(props) {
     const [show, setShow] = useState(true);
+    const isDev = process.env.NODE_ENV === "development";
 
     const onRefresh = () => {
         props.sendMessage(MESSAGES.TOOLKIT_REFRESH);
@@ -15,7 +16,7 @@ function Toolkit(props) {
     }    
 
     return (
-        show && (
+        isDev && show && (
         <div className="toolkit">
             <div className="toolkit-content">
                 <div className="toolkit-content-header">Extension Toolkit</div>

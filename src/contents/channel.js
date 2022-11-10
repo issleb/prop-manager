@@ -5,7 +5,6 @@ import { HTML, MESSAGES } from "../constants";
 import Extension from "../app/Extension";
 import Toolkit from "../app/Toolkit/Toolkit";
 
-
 const loadRoom = (port, room) => {
     let homeDiv = document.getElementById(HTML.ROOT_ID);
     if (!homeDiv) {
@@ -18,12 +17,10 @@ const loadRoom = (port, room) => {
     root.render(
         <React.StrictMode>
             <Extension room={room} />
-            if(process.env.NODE_ENV == "development") {
                 <Toolkit sendMessage={(name, message) => {
                     Messenger.send(port, name, message);
                 }} />
-            }
-        </React.StrictMode> 
+        </React.StrictMode>
     );
 }
 
@@ -33,7 +30,7 @@ const start = (name) => {
 
     Messenger.listen(port, MESSAGES.ROOM_LOAD, (message) => {
         if (message.room) {
-            console.log(`PropertyManager Room, ${message.room}`);
+            console.log("PropertyManager Room", message.room);
             loadRoom(port, message.room);
         }     
     })
