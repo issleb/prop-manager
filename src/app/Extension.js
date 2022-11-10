@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import SideBar from "./SideBar";
 import SideTab  from "./SideTab";
 
+import "./styles/_app.scss";
+
 function Extension (props) {
 
     const [showTab, setShowTab] = useState(true);
