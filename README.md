@@ -28,8 +28,9 @@
 ## Development
 
 - `npm start`
-- This will build the extension, copy it to the dist folder with Dev settings and start watching the project. Any changes to .js/.scss files will reload the extension in the browser.
-- When running in devlopment, you will also see a "Tookkit" at the top of the page.
+- Click the refresh button to reload the extension if switch from build mode.
+- This will build the extension, copy it to the dist folder with Dev settings and start watching the project. 
+- When running in devlopment, you will also see a "Tookkit" at the top of the page. Use the "Refresh" button on the toolkit to reload the extension after changes.
 
 ## Running locally
 
