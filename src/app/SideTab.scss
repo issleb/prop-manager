@@ -1,4 +1,4 @@
-@import "./app.scss";
+@import "./styles/_variables.scss";
 
 #prop-manager {
     .tab {
@@ -10,9 +10,10 @@
         z-index: 1000;
         cursor: pointer;
     
-        background: linear-gradient(160.38deg, #222eb7 1.08%, #213ca9 88.5%);
+        background-color: $main-color;
         box-shadow: 0px 8px 16px rgba(83, 91, 100, 0.24);
         border-radius: 8px 0px 0px 8px;
+
         .tab-content {
             height: 40px;
             display: flex;
@@ -21,6 +22,7 @@
             color: white;
             font-weight: bold;
             font-size: 22px;
+            
         }
     }
 }

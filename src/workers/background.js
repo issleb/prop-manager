@@ -12,18 +12,31 @@ Dev.start();
 chrome.runtime.onConnect.addListener(async (port) => {
     console.log(`${port.name} started on ${port.sender.url}.`);
 
-    if (port.name == SITES.AIRBNB) {      
+    if (port.name === SITES.AIRBNB) {      
         const channelData = Parser.parseAirUrl(port.sender.url);
-        const room = Data.getRoomByAir(channelData.id);
-        
+        const roomData = Data.getRoomByAir(channelData.id);
+
+        const room = {
+            isAirBnb: true,
+            ...roomData
+        }
+
         console.log('channelData', channelData);
         console.log('room', room);
 
         if (room) Messenger.send(port, MESSAGES.ROOM_LOAD, { room });
-    }
-    if (port.name == SITES.VRBO) {
+    } else if (port.name === SITES.VRBO) {
         const channelData = Parser.parseVrboUrl(port.sender.url);
-        const room = Data.getRoomByVrbo(channelData.id);
+        const roomData = Data.getRoomByVrbo(channelData.id);
+
+        const room = {
+            isVrbo: true,
+            ...roomData
+        }
+
+
+        console.log('channelData', channelData);
+        console.log('room', room);        
         
         if (room) Messenger.send(port, MESSAGES.ROOM_LOAD, { room });
     }

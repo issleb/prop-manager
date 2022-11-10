@@ -6,6 +6,7 @@ import "./RoomCard.scss";
 
 function RoomCard(props) {
     const room = props.room;
+    console.log("props.room", props.room);
 
     return (
         <Card className="room-card">
@@ -31,12 +32,12 @@ function RoomCard(props) {
 
 
                 <div className="room-card-subsection">
-                    {room.airbnb && (
+                    {!room.isAirBnb && (
                         <Card.Text>
                             <a href={room.airbnb.url} target="_blank">View on AirBnb</a>
                         </Card.Text>                        
                     )}
-                    {room.vrbo && (
+                    {!room.isVrbo && (
                         <Card.Text>
                             <a href={room.vrbo.url} target="_blank">View on Vrbo</a>
                         </Card.Text>                        
