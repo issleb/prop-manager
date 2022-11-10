@@ -4,16 +4,17 @@
             "id": "35782",
             "name": "Silver Lake hot tub",
             "address": "12345 Swiss Dr., Silver Lake, WI",
+            "avatar": "https://issleb-prop-manager.s3.us-east-2.amazonaws.com/rooms/35782.webp",
             "metrics": {
                 "occupancy": {
-                    "value": ".75",
-                    "market": ".85",
-                    "diff": "-.1"
+                    "value": "75",
+                    "market": "85",
+                    "diff": "-10"
                 },
                 "adr": {
-                    "value": "156",
-                    "market": "140",
-                    "diff": "16"
+                    "value": "$156",
+                    "market": "$140",
+                    "diff": "+$16"
                 }  
             },
             "airbnb": {
@@ -24,6 +25,55 @@
                 "id": "9682530ha",
                 "url": "https://www.vrbo.com/9682530ha"
             }   
-        }
+        },{
+            "id": "87326",
+            "name": "Silver Lake cottage",
+            "address": "345 Gruyere Ave., Silver Lake, WI",
+            "avatar": "https://issleb-prop-manager.s3.us-east-2.amazonaws.com/rooms/87326.webp",
+            "metrics": {
+                "occupancy": {
+                    "value": "62",
+                    "market": "77",
+                    "diff": "-15"
+                },
+                "adr": {
+                    "value": "$220",
+                    "market": "$230",
+                    "diff": "-$10"
+                }  
+            },
+            "airbnb": {
+                "id": "33654056",
+                "url": "https://www.airbnb.com/rooms/33654056"
+            },
+            "vrbo": {
+                "id": "376755ha",
+                "url": "https://www.vrbo.com/376755ha"
+            }   
+        },{
+            "id": "37910",
+            "name": "Lake Mary cottage",
+            "address": "369 Brie St., Twin Lakes, WI",
+            "avatar": "https://issleb-prop-manager.s3.us-east-2.amazonaws.com/rooms/37910.webp",
+            "metrics": {
+                "occupancy": {
+                    "value": "70",
+                    "market": "70"
+                },
+                "adr": {
+                    "value": "$270",
+                    "market": "$430",
+                    "diff": "+$30"
+                }  
+            },
+            "airbnb": {
+                "id": "39419064",
+                "url": "https://www.airbnb.com/rooms/33654056"
+            },
+            "vrbo": {
+                "id": "9184651ha",
+                "url": "https://www.vrbo.com/376755ha"
+            }   
+        }             
     ]
 }
