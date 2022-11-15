@@ -21,10 +21,18 @@ const getRoomByVrbo = (roomId) => {
     return room;
 }
 
+const getRooms = () => {
+    const properties = data.properties;
+
+    return properties;
+}
+
+
 const Data = {
     getRoom,
     getRoomByAir,
-    getRoomByVrbo
+    getRoomByVrbo,
+    getRooms
 };
 
 export default Data;

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./SideBar.scss";
-import RoomCard from "./Room/RoomCard"
+import RoomCard from "./Room/RoomCard";
 import Card from 'react-bootstrap/Card';
 
 function SideBar(props) {

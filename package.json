@@ -6,6 +6,7 @@
     "build": "webpack --config webpack/chrome.config.js --mode=production",
     "start": "webpack --config webpack/chrome.config.js --watch --mode=development",
     "host": "webpack --config webpack/host.config.js --watch --mode=development",
+    "web": "webpack --config webpack/web.config.js --watch --mode=development",
     "test": "jest"
   },
   "repository": {
